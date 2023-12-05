@@ -120,21 +120,20 @@ table td{
     }
 
     td:first-child,
-th:first-child{
-    border-radius: 0;
-}
+    th:first-child{
+        border-radius: 0;
+    }
 
-td:last-child,
-th:last-child{
-    border-radius: 0;
-}
+    td:last-child,
+    th:last-child{
+        border-radius: 0;
+    }
 
-table td::before{
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    color: #FFF;
-    text-transform: uppercase;
-}
-
+    table td::before{
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+    }
 }
