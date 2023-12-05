@@ -6,3 +6,4 @@ Projeto inicial
 
 1. npm create vite@latest cripto
 2. npm install react-router-dom localforage match-sorter sort-by
+3. npm install react-icons

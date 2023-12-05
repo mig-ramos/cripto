@@ -1,9 +1,39 @@
-import styles from './home.module.css'
+import { Link } from "react-router-dom";
+import styles from "./home.module.css";
+import { BiSearch } from "react-icons/bi";
 
-export function Home(){
-    return(
-        <div className={styles.container}>
-            <h1>Página Home</h1>
-        </div>
-    )
+export function Home() {
+  return (
+    <main className={styles.container}>
+      <form className={styles.form} action="">
+        <input type="text" placeholder="Digite o símbolo da moeda: BTC..." />
+        <button type="submit">
+          <BiSearch size={30} color="#FFF" />
+        </button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Moeda</th>
+            <th scope="col">Valor Mercado</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Volume</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr className={styles.tr}>
+            <td className={styles.tdLabel} data-label="Moeda">
+              <Link className={styles.link} to={"/detail/btc"}>
+                <span>Bitcoin</span> | BTC
+              </Link>
+            </td>
+            <td className={styles.tdLabel} data-label="Mercado">R$ 19293</td>
+            <td className={styles.tdLabel} data-label="Preço">R$ 40.96233</td>
+            <td className={styles.tdLoss} data-label="Volume"><span>-5.3</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  );
 }
