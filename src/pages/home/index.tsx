@@ -12,6 +12,7 @@ interface CoinProps {
   market_cap: string;
   formatedPrice: string;
   formatedMarket: string;
+  numberDelta: number;
 }
 
 interface DataProps {
@@ -44,6 +45,7 @@ export function Home() {
               ...item,
               formatedPrice: price.format(Number(item.price)),
               formatedMarket: price.format(Number(item.market_cap)),
+              numberDelta: parseFloat(item.delta_24h.replace(",", "."))
             };
 
             return formated;
