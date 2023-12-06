@@ -13,7 +13,15 @@ const router = createBrowserRouter([
            {
             path: "/",
             element: <Home/>
-           } 
+           },
+           {
+            path: "/detail/:cripto",
+            element: <Datail/>
+           },
+           {
+            path: "*",
+            element: <Notfound/>
+           }
         ]
     }
 ])
